@@ -1,23 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import './Styles/App.css';
+import { useState } from 'react';
+import diceImg from './images/icon-dice.svg';
+import dividerDesktopImg from './images/pattern-divider-desktop.svg';
 
 function App() {
+  const [message, SetMessage] = useState([176, "Good things come to those who wait."]);
+
+  window.onload = () => {
+    request()
+      .then(function (result) {
+        SetMessage(old => result);
+      })
+      .catch(function () {
+        console.log('error')
+      })
+  }
+
+  // pure functions
+  function request() {
+    let array1 = ['test', 'test'];
+
+    // Ajax Promise with then() request
+    return new Promise(function (resolve, reject) {
+      let xhr = new XMLHttpRequest();
+      xhr.onload = function (event) {
+        let obj1 = JSON.parse(event.target.response);
+        array1 = [obj1.slip.id, obj1.slip.advice];
+        resolve(array1);
+      }
+      xhr.onerror = reject;
+      xhr.open("GET", 'https://api.adviceslip.com/advice');
+      xhr.send();
+    })
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="Page-Wrapper">
+      <div id='card'>
+        <p id='title'>{`ADVICE #${message[0]}`}</p>
+        <p id='message'>{`"${message[1]}"`}</p>
+        <img id='divider' src={dividerDesktopImg} alt='' />
+        <button onClick={() =>
+          request()
+            .then(function (result) {
+              SetMessage(old => result);
+            })
+            .catch(function () {
+              console.log('error')
+            })
+        }>
+          <img src={diceImg} alt='' />
+        </button>
+      </div>
     </div>
   );
 }
