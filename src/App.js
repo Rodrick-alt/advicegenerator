@@ -16,17 +16,15 @@ function App() {
       })
   }
 
-  // pure functions
   function request() {
-    let array1 = ['test', 'test'];
-
+    let arr = [];
     // Ajax Promise with then() request
     return new Promise(function (resolve, reject) {
       let xhr = new XMLHttpRequest();
       xhr.onload = function (event) {
         let obj1 = JSON.parse(event.target.response);
-        array1 = [obj1.slip.id, obj1.slip.advice];
-        resolve(array1);
+        arr = [obj1.slip.id, obj1.slip.advice];
+        resolve(arr);
       }
       xhr.onerror = reject;
       xhr.open("GET", 'https://api.adviceslip.com/advice');
