@@ -1,17 +1,15 @@
 {
   "files": {
-    "main.css": "/advicegenerator/static/css/main.2f35e227.css",
-    "main.js": "/advicegenerator/static/js/main.cc055601.js",
-    "static/js/787.21b35709.chunk.js": "/advicegenerator/static/js/787.21b35709.chunk.js",
+    "main.css": "/advicegenerator/static/css/main.96b122fe.css",
+    "main.js": "/advicegenerator/static/js/main.b8e0bb38.js",
     "index.html": "/advicegenerator/index.html",
     "static/media/icon-dice.svg": "/advicegenerator/static/media/icon-dice.08691e4c24c11b5ba564e06b1f6bcbf3.svg",
     "static/media/pattern-divider-desktop.svg": "/advicegenerator/static/media/pattern-divider-desktop.ed9685263f6b47d21c8848f7d8bdd10e.svg",
-    "main.2f35e227.css.map": "/advicegenerator/static/css/main.2f35e227.css.map",
-    "main.cc055601.js.map": "/advicegenerator/static/js/main.cc055601.js.map",
-    "787.21b35709.chunk.js.map": "/advicegenerator/static/js/787.21b35709.chunk.js.map"
+    "main.96b122fe.css.map": "/advicegenerator/static/css/main.96b122fe.css.map",
+    "main.b8e0bb38.js.map": "/advicegenerator/static/js/main.b8e0bb38.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f35e227.css",
-    "static/js/main.cc055601.js"
+    "static/css/main.96b122fe.css",
+    "static/js/main.b8e0bb38.js"
   ]
 }
